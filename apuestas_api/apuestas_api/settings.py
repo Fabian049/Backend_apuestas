@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,7 +78,12 @@ WSGI_APPLICATION = 'apuestas_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'apuestal_django.db.back',
+        'USER': 'apuestal_admindb',
+        'PASSWORD': 'apuestasadmin11.',
+        'HOST': 'localhost',
+        'PORT': '3306',
+
     }
 }
 
@@ -116,7 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL="/static/"
+MEDIA_URL='/media/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) 
+STATIC_ROOT='/home/todocargo/public_html/static'
+MEDIA_ROOT='/home/todocargo/public_html/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
