@@ -29,16 +29,16 @@ class CuotaView(View):
             cuotas = list(Cuota.objects.filter(id=id).values())
             if len(cuotas) > 0:
                 cuota =  cuotas[0]
-                datos = {'message': "Success", 'company': cuota}
+                datos = {'message': "Success", 'Cuotas': cuota}
             else:
-                datos = {'message': "Company not found..."}
+                datos = {'message': "Cuotas not found..."}
             return JsonResponse(datos)
           else:
             cuotas = list(Cuota.objects.values())
             if len(cuotas) > 0:
-                datos = {'message': "Success", 'companies': cuotas}
+                datos = {'message': "Success", 'cuotas': cuotas}
             else:
-                datos = {'message': "Companies not found..."}
+                datos = {'message': "cuota not found..."}
             return JsonResponse(datos)
 
 
@@ -53,14 +53,14 @@ class AyerView(View):
             ayer = list(Ayer.objects.filter(id=id).values())
             if len(ayer) > 0:
                 ayer1 =  ayer[0]
-                datos = {'message': "Success", 'company': ayer1}
+                datos = {'message': "Success", 'ayer': ayer1}
             else:
-                datos = {'message': "Company not found..."}
+                datos = {'message': "ayer not found..."}
             return JsonResponse(datos)
           else:
             ayer = list(Ayer.objects.values())
             if len(ayer) > 0:
-                datos = {'message': "Success", 'companies': ayer}
+                datos = {'message': "Success", 'ayer': ayer}
             else:
-                datos = {'message': "Companies not found..."}
+                datos = {'message': "ayer not found..."}
             return JsonResponse(datos)
