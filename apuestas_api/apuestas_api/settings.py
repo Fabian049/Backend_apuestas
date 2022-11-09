@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7(^z)ma+ark@bpdc@ku@zi_go5yzn%@hnh=+hp)y9_#jvxj)oh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://apuestalofree.com', 'apuestalofree.com']
 
 
 # Application definition
@@ -125,8 +125,8 @@ USE_TZ = True
 STATIC_URL="/static/"
 MEDIA_URL='/media/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) 
-STATIC_ROOT='/home/todocargo/public_html/static'
-MEDIA_ROOT='/home/todocargo/public_html/media'
+STATIC_ROOT='/home4/apuestal/public_html/static'
+MEDIA_ROOT='/home4/apuestal/public_html/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
